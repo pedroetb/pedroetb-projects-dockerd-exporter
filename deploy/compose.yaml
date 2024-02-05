@@ -9,7 +9,7 @@ services:
       metric-net:
     configs:
       - source: caddyfile-config
-        target: /etc/Caddyfile
+        target: /etc/caddy/Caddyfile
     healthcheck:
       test: wget --spider -q http://localhost:${CADDY_PORT}/health
       interval: ${HEALTHCHECK_INTERVAL:-30s}
